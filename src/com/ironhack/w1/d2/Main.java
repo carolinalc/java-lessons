@@ -1,7 +1,9 @@
 package com.ironhack.w1.d2;
 
 import java.lang.reflect.Array;
+import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.List;
 
 public class Main {
     public static void main(String[] args) {
@@ -65,6 +67,33 @@ public class Main {
         System.out.println(Math.sqrt(64)); //raiz cuadrada, nos devuelve un doble
         System.out.println((int) Math.pow(2, 5));
         //ciudado al indicar el tipo haciendo casting que se puede perder info (decimales)
+
+
+    // ARRAYLIST
+        //para hacer lista de primitivos hay que usar wrappers
+
+        List<String> countries = new ArrayList<>();
+        countries.add("España");
+        countries.add("Portugal");
+        countries.add("Francia");
+        System.out.println(countries); //imprime el array, no la posicion en memoria
+        System.out.println(countries.get(0));
+        countries.set(0, "Italia");
+        System.out.println(countries.get(0));
+        System.out.println(countries.size());//igual al length
+        countries.remove(0);
+        System.out.println(countries.size());
+
+
+    // ADD ELEMENTS TO A LIST
+
+        int[] numbers = {0, 1, 2, 3, 4};
+        int[] newArray = new int[6];
+        for (int i = 0; i < 5; i++){
+            newArray[i] = numbers[i];
+        }
+        newArray[5] = 5;
+        System.out.println(Arrays.toString(newArray));
     }
 
     public static String[] createSubjetcsArray() {
